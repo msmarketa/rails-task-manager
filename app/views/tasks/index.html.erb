@@ -1,0 +1,12 @@
+<h1>All tasks</h1>
+<p><%= link_to 'Add new task', new_task_path(@task) %></p>
+<ol>
+<% @tasks.each do |task| %>
+  <li><strong><%= link_to task.name, task_path(task) %>
+</strong> - <%= task.details %> || <%= link_to 'Edit', edit_task_path(task) %> || <%= link_to 'Delete', task_path(task), method: :delete %></li>
+<% end %>
+</ol>
+
+<!--
+a link to its delete action. Hint: a standard link does not allow to perform DELETE request, so here you should add a method: :delete option to your link_to helper.
+Should include a link to the new view to create a new task -->
