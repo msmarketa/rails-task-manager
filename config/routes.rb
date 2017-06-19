@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get "/", to: "tasks#index"
+    get "/", to: "tasks#index"
 
   # get 'tasks/show'
 
